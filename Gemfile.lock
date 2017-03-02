@@ -57,6 +57,9 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    closure_tree (6.4.0)
+      activerecord (>= 4.1.0)
+      with_advisory_lock (>= 3.0.0)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -349,6 +352,9 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     will_paginate (3.1.5)
+    with_advisory_lock (3.1.0)
+      activerecord (>= 3.2)
+      thread_safe
     xml-simple (1.1.5)
 
 PLATFORMS
@@ -360,6 +366,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   byebug (= 9.0.0)
   carrierwave (= 0.11.2)
+  closure_tree
   coffee-rails (~> 4.2)
   config
   fog (= 1.38.0)
@@ -386,4 +393,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.14.4
+   1.14.5

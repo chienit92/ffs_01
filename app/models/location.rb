@@ -1,7 +1,5 @@
 class Location < ApplicationRecord
-  has_many :locations
+  acts_as_tree order: "name DESC"
 
-  belongs_to :shop
-  belongs_to :user
-  belongs_to :order
+  has_many :shops
 end
