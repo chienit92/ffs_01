@@ -21,17 +21,22 @@
               <div class="pro_price">
                 <%= number_to_currency @product.price %>
               </div>
+
+              <%= form_for @order_detail do |f| %>
+
               <div class="add_quantity_cart">
                 <div class="quantity">
-
-                </div>
-                <div class="slash">
-                  /
+                  <div class="input-group">
+                    <%= f.number_field :unit_quantity, value: Settings.one,
+                      class: "form-control", min: Settings.one %>
+                  </div>
                 </div>
                 <div class="butn-cart">
-
+                  <%= f.hidden_field :product_id, value: @product.id %>
+                  <%= f.submit t(".add_cart"), class: "btn btn-danger" %>
                 </div>
               </div>
+              <% end %>
             </div>
           </div>
       </div>

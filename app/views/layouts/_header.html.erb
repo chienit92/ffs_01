@@ -3,6 +3,13 @@
     <%= link_to t("title_page"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <% if current_order.id %>
+          <%= link_to order_path(current_order) do %>
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <%= t ".cart" %>
+            <%= t ".info", size: current_order.order_details.size %>
+          <% end %>
+        <% end %>
         <% if user_signed_in? %>
           <li><%= link_to current_user.name, edit_user_registration_path %></li>
           <li><%= link_to t("logout"), destroy_user_session_path, method: :delete %></li>

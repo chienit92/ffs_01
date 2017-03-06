@@ -1,0 +1,29 @@
+<tr>
+  <td class="col-sm-8 col-md-6">
+    <div class="media">
+      <%= link_to product_path(order_detail.product), class: "order_image pull-left" do %>
+        <%= default_image order_detail.product %>
+      <% end %>
+      <div class="media-body">
+        <h2 class="media-heading"><%= order_detail.product.name %></h2>
+      </div>
+    </div>
+  </td>
+  <td class="col-sm-1 col-md-1" id="order_detail_quantity">
+    <%= order_detail.unit_quantity %>
+  </td>
+  <td class="col-sm-2 col-md-2" id="order_detail_price">
+    <%= number_to_currency order_detail.unit_price %>
+  </td>
+  <td class="col-sm-2 col-md-2" id="order_detail_total">
+    <%= number_to_currency order_detail.total %>
+  </td>
+  <td class="col-sm-2 col-md-2" id="order_detail_bnt">
+    <%= link_to order_detail_path(order_detail),
+      method: :delete,
+      class: "btn btn-danger",
+      data: {confirm: t(".confir_delete")} do %>
+        <span class="fa fa-remove"></span>
+      <% end %>
+  </td>
+</tr>

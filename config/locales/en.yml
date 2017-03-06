@@ -49,6 +49,26 @@ en:
       home:
         staff_home: "Staffs Central"
         staff_des: "Homepage of staffs"
+  products:
+    index:
+      add: "+1"
+    show:
+      available: "Available"
+      not_availabel: "Not Available"
+      add_cart: "Add to cart"
+      not_exist: "Don't have product"
+  orders:
+    show:
+      total_pay: "Total Pay: "
+      product: "Product"
+      quantity: "Quantity"
+      price: "Price"
+      total: "Total"
+      continue: "Continue Shopping"
+      checkout: "Checkout"
+  order_details:
+    order_detail:
+      confir_delete: "Delete?"
   views:
     errors_contain: "The form contains"
     error: "error"
@@ -140,12 +160,10 @@ en:
         create_product: "Create product success"
         update_product: "Product updated"
         delete_product: "Product deleted"
-  products:
-    show:
-      available: "Available"
-      not_availabel: "Not Available"
-      add_cart: "Add to cart"
-      not_exist: "Don't have product"
+  flash:
+    danger:
+      staff: "STAFF!!!! Don't order"
+      order_total: "Order don't have products"
   number:
     format:
       separator: "."

@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "animate.min.css";
+@import "font-awesome";
+
+/* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
 
@@ -59,7 +62,11 @@ p {
 
 
 /* header */
-
+.navbar{
+  color: red;
+  background: red;
+  border-color: red;
+}
 #logo {
   float: left;
   margin-right: 10px;
@@ -108,11 +115,6 @@ footer {
     }
   }
 }
-.navbar{
-  color: red;
-  background: red;
-  border-color: red;
-}
 /* product-index */
 .col-item {
   background: #FFF;
@@ -152,8 +154,8 @@ footer {
   position: relative;
   line-height: normal;
   &:hover {
-color: red;
-text-decoration: none;
+    color: red;
+    text-decoration: none;
   }
 }
 .col-item .price-details p {
@@ -241,41 +243,44 @@ text-decoration: none;
   position:relative;
 }
 #stock_available{
-  color:red;
-  font-size:18px;
-  font-weight:500;
-  font-style:normal;
-  text-decoration:none !important;
-  padding:40%;
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none !important;
+  padding: 40%;
 }
 .pro_price{
-  float:left;
-  width:100%;
-  margin:15px 0;
-  padding-left:10%;
-  font-size:25px;
-  font-style:italic;
+  float: left;
+  width: 100%;
+  margin: 15px 0;
+  padding-left: 10%;
+  font-size: 25px;
+  font-style: italic;
 }
 .add_quantity_cart{
-  width:80%;
-  float:left;
-  margin-left:10%;
-  border-top:1px
-  solid #aaa;
-  border-bottom:1px solid #aaa;
-  height:70px;
-  padding:10px;
-  margin-bottom:30px;
-}
-.slash{
+  width: 80%;
   float: left;
-  width: 5%;
-  font-size: 75px;
-  padding: 0;
-  margin: 0;
-  line-height: 0.6;
+  margin-left: 10%;
+  border-top: 1px
+  solid #aaa;
+  border-bottom: 1px solid #aaa;
+  height: 70px;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 .quantity{
-  float:left;
-  width:45%;
+  float: left;
+  width: 45%;
+}
+
+/* Order */
+.order_image img{
+  max-width: 117px;
+  max-height: 116px;
+}
+.h2 .media-heading{
+}
+#order_detail_quantity,#order_detail_price,#order_detail_total{
+  text-align: center;
 }

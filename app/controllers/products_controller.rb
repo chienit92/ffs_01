@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  include CheckOrder
+
+  before_action :check_staff_order, only: [:index, :show]
+
   def index
     @products = Product.all
   end

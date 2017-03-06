@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(version: 20170309072805) do
     t.datetime "updated_at",  null: false
     t.index ["discount_id"], name: "index_orders_on_discount_id"
     t.index ["shop_id"], name: "index_orders_on_shop_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|

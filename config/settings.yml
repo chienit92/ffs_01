@@ -1,5 +1,7 @@
-zero: 0
+min_total: 0
 one: 1
-weight: 550
+width: 550
 height: 436
 eight: 8
+size: 9
+

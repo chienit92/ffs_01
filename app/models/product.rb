@@ -8,8 +8,6 @@ class Product < ApplicationRecord
 
   mount_uploader :image, AvatarUploader
 
-  validates :image, presence: true
   validates :name, presence: true
   validates :price, presence: true
-  validates :status, presence: true
 end

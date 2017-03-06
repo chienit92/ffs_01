@@ -6,7 +6,7 @@ class CreateOrders < ActiveRecord::Migration[5.0]
       t.string :rec_phone
       t.float :total
       t.integer :status
-      t.references :user, foreign_key: true
+      t.integer :user_id
       t.references :shop, foreign_key: true
       t.references :discount, foreign_key: true
 
