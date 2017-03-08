@@ -86,6 +86,7 @@ en:
           product: "Product"
           category: "Categories"
           order: "Order"
+          statistic: "Statistic"
       body:
       footer:
         copy_right: "2017 Website developed by"

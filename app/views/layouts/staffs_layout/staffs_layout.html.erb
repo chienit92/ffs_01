@@ -8,17 +8,19 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": true %>
     <%= render "layouts/shim" %>
   </head>
-
-  <body id="users">
-    <div class="user container">
-      <%= render "layouts/staffs_layout/header" %>
-      <div class="container">
-        <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-        <% end %>
-        <%= yield %>
+  <body class="staff">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 sidebar2">
+          <%= render "layouts/staffs_layout/header" %>
+        </div>
+        <div class="col-md-9 col-sm-8 main-content">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+          <%= yield %>
+        </div>
       </div>
-      <%= render "layouts/footer" %>
     </div>
   </body>
 </html>

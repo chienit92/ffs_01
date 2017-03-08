@@ -1,16 +1,55 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to t("title_page"), root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if staff_signed_in? %>
-          <li><%= link_to current_staff.name, "#" %></li>
-          <li><%= link_to t("orders"), admin_orders_path %></li>
-          <li><%= link_to t("logout"), destroy_staff_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to t("login"), new_staff_session_path, id: "head" %></li>
-        <% end %>
-      </ul>
-    </nav>
+<% if staff_signed_in? %>
+  <div class="logo text-center">
+    <%= image_tag "admin.png", class: "img-responsive center-block", size: "64x64" %>
+    <h4><%= current_staff.name %></h4>
+    <div class="coins">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+    </div>
+    <p class="coins"><%= current_staff.position%></p>
+    <div>
+      <%= link_to t("logout"), destroy_staff_session_path,
+        class: "btn btn-default Log-out", method: :delete %>
+    </div>
   </div>
-</header>
+  <br>
+  <div class="left-navigation">
+    <ul class="list">
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-home"></i>
+            <%= t "views.admins.header.menu.home" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-male"></i>
+          <%= t "views.admins.header.menu.staff" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-cube"></i>
+            <%= t "views.admins.header.menu.product" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-th"></i>
+          <%= t "views.admins.header.menu.category" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-bar-chart"></i>
+          <%= t "views.admins.header.menu.statistic" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="fa fa-users"></i>
+          <%= t "views.admins.header.menu.user" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+<% end %>
